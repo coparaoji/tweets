@@ -5,7 +5,7 @@
 {% endblock%}
 
 {% block body %}
-<div class="content">
+<div>
     <h1 style="text-align: center">Task Master</h1>
     {% if tasks|length < 1 %}
         <h4 style="text-align: center">There are no tasks. Create one below!</h4>
@@ -37,5 +37,49 @@
             <input type="submit" value="Add Task">
         </form>
     </div>
+
+    <table>
+                <table>
+                    <tr>
+                        <th>Most Loved Player</th>
+                    </tr>
+                    <tr>
+                        <table>
+                            <tr>
+                                <th>Player</th>
+                                <th>Positive Tweets</th>
+                                <th>Negative Tweets</th>
+                            </tr>
+                            <tr>
+                                <td>LeBron James</td>
+                                <td>500</td>
+                                <td>20</td>
+                            </tr>
+                        </table>
+                    </tr>
+                </table>
+            </td>
+
+            <td>
+                <table>
+                    <tr>
+                        <th>Most Loved Player</th>
+                    </tr>
+                    <tr>
+                        <table>
+                            <tr>
+                                <th>Player</th>
+                                <th>Positive Tweets</th>
+                                <th>Negative Tweets</th>
+                            </tr>
+                            <tr>
+                                <td>LeBron James</td>
+                                <td>500</td>
+                                <td>20</td>
+                            </tr>
+                        </table>
+                    </tr>
+                </table>
+    </table>
 </div>
 {% endblock%}

@@ -14,8 +14,8 @@ table, td, th {
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
+    border-collapse: separate;
+    width: 50%;
 }
 
 th {
@@ -34,3 +34,4 @@ td {
 #content {
     width: 70%;
 }
+
