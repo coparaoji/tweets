@@ -1,4 +1,4 @@
-# tweets
+# tweets (in-progress)
 A project that is an ettmept to measure the twitter's public opinion of NBA players.
 
 #### Collecting tweets
