@@ -7,11 +7,8 @@
 {% block body %}
 <div>
     <table border = "1" width = "100%">
-        <thead>
-           <tr>
-              <td colspan = "5">Team name</td>
-           </tr>
-        </thead>
+        <caption>Team name</caption>
+        
         
         <tbody>
             <tr>
@@ -21,6 +18,15 @@
                 <th>Average</th>
                 <th>Sum Total</th>
             </tr>
+            {% for player in database %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            (%  %)
             
         </tbody>
         
