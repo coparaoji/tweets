@@ -4,17 +4,21 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////databases/tweets'
 db = SQLAlchemy(app)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'False'
 
 
-class Todo(db.Model):
-    player_id = db.Column(db.Integer, primary_key=True)
-    content = db.Column(db.String(200), nullable= False)
-    date_created = db.Column(db.DateTime, default=datetime.utcnow)
+class Tweet(db.Model):
+    __name__ = 'tweet'
+    id = db.Column(db.Integer, primary_key=True)
+    text = db.Column(db.String(241), nullable=False)
+    player_id = db.Column(db.String(50), unique=True, nullable=False)
+    sentiment_score = db.Column(db.Float, nullable=False)
+    created_at = db.Column(db.DateTime, nullable=False)
 
     def __repr__(self):
-        return '<Task %r' % self.id
+        return (f"<Tweets id:{id} text:{text} created_at:{created_at}")
 
 
 @app.route('/', methods=['POST', 'GET'])
