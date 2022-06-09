@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import render_template
 import sys
 import os
 sys.path.append(os.path.dirname('..'))
