@@ -1,13 +1,15 @@
-
+{%extends 'base.html' %}
 
 {% block head %}
-<title>Tweets</title>
+<title>TaskMaster</title>
 {% endblock%}
 
+{% block body %}
 <div>
     <table border = "1" width = "100%">
         <caption>Team name</caption>
-
+        
+        
         <tbody>
             <tr>
                 <th>Number</th>
@@ -15,17 +17,20 @@
                 <th>Total Tweets</th>
                 <th>Average</th>
                 <th>Sum Total</th>
-            </tr> 
-            {% for player in data %}
-            <tr>
-                <td>{{ player[0] }}</td>
-                <td>{{ player[1] }}</td>
-                <td>{{ player[2] }}</td>
-                <td>{{ player[3] }}</td>
-                <td>{{ player[2]*player[3] }}</td>
             </tr>
-            {% endfor %}
+            {% for player in database %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            (%  %)
+            
         </tbody>
+        
      </table>
-    
 </div>
+
+{% endblock%}
