@@ -9,8 +9,9 @@ app = factory.create_app()
 
 @app.route('/', methods=['GET'])
 def index():
-   from src import dbs
+   from tweets.db import dbs
    data = dbs.get_data()
+   #return (f'<p>{ app.template_folder }</p>')
    return render_template('index.html', data=data)
 
 

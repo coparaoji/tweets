@@ -5,7 +5,7 @@ import os
 SCRIPT_DIR = os.path.dirname(os.path.abspath('../factory.py'))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 sys.path.append('.../tweets')
-from ..src import dbs
+from ..db import dbs
 
 
 class TestDataRetrieval:
