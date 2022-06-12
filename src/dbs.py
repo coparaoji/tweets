@@ -9,7 +9,7 @@ def create_connection(db_file):
     conn = None
     try:
         conn = sqlite3.connect(db_file)
-    except Error as e:
+    except sqlite3.Error as e:
         print(e)
 
     return conn
@@ -74,7 +74,7 @@ def create_tweet(conn, tweet):
     return cur.lastrowid
 
 def get_data():
-   database = "/home/alex/GreyCroc/tweets/Databases/tweets.db"
+   database = "/home/alex/GreyCroc/tweets/db/tweets.db"
    conn =  create_connection(database)
    sql_query = '''SELECT number,name,num_tweets,res_avg FROM player'''
    cursor = conn.cursor()
