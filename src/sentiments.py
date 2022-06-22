@@ -8,10 +8,14 @@ import os
 from google.cloud import language_v1
 
 class Sentiment_getter:
-    '''
-    This is the class for all sentiment needs.
-    It will need to handle retrieveal to a databae as well.
-    '''
+    """This is the class for all sentiment needs.
+
+    It will need to handle retrieveal to a database as well.
+
+    Attributes:
+        path_to_client_key: A sting for path to api key.
+        client: A google cloud class for client apis.
+    """
 
     # This key will be changed to a key with less permissions
     path_to_cient_key = "/home/alex/GreyCroc/Braindump/secure_keys/serene-gradient.json" 
@@ -20,14 +24,19 @@ class Sentiment_getter:
     # Instantiates a client
     client = language_v1.LanguageServiceClient()
 
-    def __init__(self) -> None:
-        pass
-
 
     def get_sentiment(self, text:str)->tuple:
+        """This function getst the sentiment of the text it's given
+
+        Args:
+            text: the string to be analyzed by the api
+
+        Returns:
+            A tuple (score, magnitude) where score is a float value 
+            for the sentiment and magnitude is the strength
+            attatched to the score.
         """
-        This function getst the sentiment of the text it's given
-        """
+        
         # The text to analyze
         document = language_v1.Document(
             content=text, type_=language_v1.Document.Type.PLAIN_TEXT
