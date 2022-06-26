@@ -32,9 +32,9 @@ Start the server
 ```
 
 
-## Documentation
+## Presentation
 
-[Documentation](https://tweets.readthedocs.io/en/issue-6/)
+[Presentation](https://docs.google.com/presentation/d/1Nb5vvN_XXGx6za1ZV8ilrjVG8_3qM_r5jGn9zps7m4o/edit?usp=sharing)
 
 
 ## Appendix
