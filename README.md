@@ -5,7 +5,7 @@ A project that is an ettmept to measure the twitter's public opinion of NBA play
 Using Twitters API, searches will be made to collect tweets and replies that mention a specified NBA player. Tweets from more that 2 days ago will not be used in order to ensure the data represents the current public opinion of these said player. 
 
 
-## Run Locally
+## System Design
 
 <p align="center">
 <img src="public/Assets/labeled_diagram.png" width="600" height="500"></img>
