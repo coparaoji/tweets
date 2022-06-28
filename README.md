@@ -7,9 +7,7 @@ Using Twitters API, searches will be made to collect tweets and replies that men
 
 ## System Design
 
-<p align="center">
-<img src="public/Assets/labeled_diagram.png" width="600" height="500"></img>
-</p>
+TBD
 
 ## Run Locally
 
