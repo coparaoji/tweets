@@ -19,12 +19,12 @@ class Tweets:
     def __init__(self):
         pass
 
-    def search_player(self,player_name):
+    def search_player(self,player_name, time_back = (6,0,0)):
         # This is for searching players with the twitter api.
-        end_datetime = datetime.datetime.today() - datetime.timedelta(days=6)
+        end_datetime = datetime.datetime.today() - datetime.timedelta(days=time_back[0], hours=time_back[1], seconds=time_back[2])
 
         query = f'(entity:"{player_name}" OR "{player_name}") -is:retweet lang:en'
-
+    
         response =  self.client.search_recent_tweets(
         query=query,
         start_time=end_datetime,
@@ -40,5 +40,6 @@ class Tweets:
             dates.append(tweet.created_at)
 
         return (ids, texts, dates)
+    
 
  
