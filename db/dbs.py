@@ -73,6 +73,22 @@ def create_tweet(conn, tweet):
     conn.commit()
     return cur.lastrowid
 
+def create_tweets(conn, tweets):
+    for tweet in tweets:
+        create_tweet(conn,tweet)
+
+
+def get_players():
+    database = "/home/alex/GreyCroc/tweets/db/tweets.db"
+    conn =  create_connection(database)
+    sql_query = '''SELECT name,player_id FROM player'''
+    cursor = conn.cursor()
+    cursor.execute(sql_query)
+    rows = cursor.fetchall()
+    rows = list(map((lambda x:(x[0],x[1])), rows))
+    return rows
+
+
 def get_data():
    database = "/home/alex/GreyCroc/tweets/db/tweets.db"
    conn =  create_connection(database)
