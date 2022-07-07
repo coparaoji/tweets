@@ -7,7 +7,7 @@ import os
 def run_app():
     #run app
     os.system("pwd")
-    os.system("./run.sh")
+    os.system("flask run")
 
 def background():
     time.sleep(10)
@@ -17,10 +17,10 @@ def background():
         time.sleep(10)
 
 
-if __name__ == '__main__':
-    mainApp = multiprocessing.Process(target=run_app)
-    background_task = multiprocessing.Process(target=background, daemon=False)
-    os.system("#!/bin/bash")
-    os.system("export FLASK_APP=app.py")
-    mainApp.start()
-    background_task.start()
+
+mainApp = multiprocessing.Process(target=run_app)
+background_task = multiprocessing.Process(target=background, daemon=False)
+os.system("export FLASK_APP=app.py")
+
+mainApp.start()
+background_task.start()

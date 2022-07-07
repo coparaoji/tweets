@@ -21,6 +21,7 @@ if __name__ == '__main__':
 
 @app.cli.command()
 def tweet_fetch():
+   """A method to fetch tweets"""
    from src import tweets
    from tweets.db import dbs
 
@@ -44,7 +45,7 @@ def tweet_fetch():
                with conn:
                   try:
                      dbs.create_tweet(conn,record)
-                     print('1 success')
+                     print(f'feteched {player[0]} tweet')
                   except Exception as e:
                      print(e)
                      continue
