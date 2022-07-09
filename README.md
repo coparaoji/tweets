@@ -34,7 +34,7 @@ Install dependencies
 Start the server with the run.py file
 
 ```bash
-  python3 run.py
+  python run.py
 ```
 
 
