@@ -3,6 +3,8 @@
 import multiprocessing
 import time
 import os
+import db
+
 
 def run_app():
     #run app
@@ -18,9 +20,7 @@ def background():
 
 
 if __name__ == '__main__':
-    mainApp = multiprocessing.Process(target=run_app)
     background_task = multiprocessing.Process(target=background, daemon=True)
     os.system("export FLASK_APP=app.py")
     background_task.start()
-    #mainApp.start()
     run_app()

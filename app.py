@@ -39,8 +39,8 @@ def tweet_fetch():
          print(e)
       
       num_tweets = len(ids)
+      print(f'Fetched {num_tweets} tweets for {player[0]}')
       if(num_tweets>0):
-         print(f'Fetched {num_tweets} tweets for {player[0]}')
          for idx in range(num_tweets):
                unique_id = player[1]+str(ids[idx])
                tweet_id = ids[idx]
