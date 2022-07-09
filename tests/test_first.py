@@ -15,7 +15,8 @@ class TestConnections:
     def testDatabaseConn(self):
         try:
             result="success"
-            dbs.create_connection('db/tweets.db')
+            print(os.environ.get('DATABASE_PATH'))
+            dbs.create_connection()
         except Exception as e:
             result = e
         finally:
