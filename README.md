@@ -7,7 +7,9 @@ Using Twitters API, searches will be made to collect tweets and replies that men
 
 ## System Design
 
-TBD
+<p align="center"> 
+<img src="public/Assets/Labelled Tweets Diagram.png" width="500" height="400"></img>  
+</p>
 
 ## Run Locally
 
@@ -29,10 +31,10 @@ Install dependencies
   pip -r requirements.txt
 ```
 
-Start the server
+Start the server with the run.py file
 
 ```bash
-  python3 app.py
+  python3 run.py
 ```
 
 

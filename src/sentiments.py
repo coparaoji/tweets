@@ -1,6 +1,7 @@
 # -----------------------------------------------------------
-# File for handling and getting the setiment of the tweets
+# File for handling and getting the setiment of the tweets.
 #
+# This file should be updated to us AWS targeted Sentiment instead of 
 # 2022 Alex Oparaoji
 # email coparaoji@gmail.com
 # -----------------------------------------------------------

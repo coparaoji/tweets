@@ -60,7 +60,7 @@ def create_player(conn, player):
 
 def create_tweet(conn, tweet):
     """
-    Create a new task
+    Create a new task.
     :param conn:
     :param tweet:
     :return:

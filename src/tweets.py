@@ -7,14 +7,15 @@
 
 from tweepy import Client
 import datetime
+import os
 
-bearer_token ='AAAAAAAAAAAAAAAAAAAAAHLNcgEAAAAAcT1066CikEPelcTlLn4Aie%2FMOZQ%3DFnJ57W2cK6opwqifsi9JfjuODqsFDE2x25rTtQNjNOSsVCjtlx'
+os.environ['BEARER_TOKEN'] ='AAAAAAAAAAAAAAAAAAAAAHLNcgEAAAAAcT1066CikEPelcTlLn4Aie%2FMOZQ%3DFnJ57W2cK6opwqifsi9JfjuODqsFDE2x25rTtQNjNOSsVCjtlx'
 
 class Tweets:
     """
     This makes searches for tweets and updates the databases
     """
-    client = Client(bearer_token=bearer_token) 
+    client = Client(bearer_token=os.environ.get('BEARER_TOKEN')) 
     
     def __init__(self):
         pass
