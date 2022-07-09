@@ -39,7 +39,7 @@ Start the server with the run.py file
 
 
 ## Presentation
-TBD
+The presentation deck can be found <a href="https://docs.google.com/presentation/d/1Nb5vvN_XXGx6za1ZV8ilrjVG8_3qM_r5jGn9zps7m4o/edit?usp=sharing">here</a>.
 
 
 ## Appendix
