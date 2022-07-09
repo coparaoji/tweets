@@ -1,6 +1,8 @@
 import sqlite3
+import os
 
-def create_connection(db_file):
+
+def create_connection(db_file = os.environ['DATABASE_PATH']):
     """ create a database connection to the SQLite database
         specified by db_file
     :param db_file: database file
@@ -60,7 +62,7 @@ def create_player(conn, player):
 
 def create_tweet(conn, tweet):
     """
-    Create a new task
+    Create a new task.
     :param conn:
     :param tweet:
     :return:
@@ -73,9 +75,24 @@ def create_tweet(conn, tweet):
     conn.commit()
     return cur.lastrowid
 
-def get_data():
-   database = "/home/alex/GreyCroc/tweets/db/tweets.db"
+def create_tweets(conn, tweets):
+    for tweet in tweets:
+        create_tweet(conn,tweet)
+
+
+def get_players(database = os.environ['DATABASE_PATH']):
+    conn =  create_connection(database)
+    sql_query = '''SELECT name,player_id FROM player'''
+    cursor = conn.cursor()
+    cursor.execute(sql_query)
+    rows = cursor.fetchall()
+    rows = list(map((lambda x:(x[0],x[1])), rows))
+    return rows
+
+
+def get_data(database = os.environ['DATABASE_PATH']):
    conn =  create_connection(database)
+   print(f" env is {os.environ.get('DATABASE_PATH')}")
    sql_query = '''SELECT number,name,num_tweets,res_avg FROM player'''
    cursor = conn.cursor()
    cursor.execute(sql_query)
